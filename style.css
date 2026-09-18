@@ -1,269 +1,283 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-
-*{
-    padding: 0;
+* {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    overflow: hidden;
+html {
+    scroll-behavior: smooth;
 }
 
-nav{
-    width: 100%;
-    height: 10vh;
-    position: sticky;
+body {
+    background: #f7f7f5;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-.nav-container{
-    width: 100%;
-    height: 100%;
+nav {
+    height: 90px;
+    padding: 0 8%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-between;
 }
 
-.logo{
-    color: white;
-    font-size: 2rem;
+.logo {
+    font-size: 24px;
     font-weight: bold;
-}
-
-.logo span{
-    color: rgb(211,3,3);
-    text-shadow: 0 0 10px rgb(211,3,3) ;
-}
-
-.hamburg,
-.cancel{
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    color: white;
-    display: none;
-    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
-}
-
-.nav-container .links {
-    display: flex;
-}
-
-.nav-container .links a{
-    font-size: 1.2rem;
-    color: white;
-    margin: 0 20px;
+    color: #111;
     text-decoration: none;
-    font-weight: 550;
-    transition: 0.3s linear;
 }
 
-.nav-container .links a:hover{
-    color: rgb(211,3,3);
-    border-bottom: 2px solid rgb(211,3,3);
-}
-
-.dropdown{
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    transform: translateY(-500px);
-    width: 100%;
-    height: auto;
-    backdrop-filter: blur(4px) brightness(40%);
-    box-shadow: 0 0  20px black;
-    transition: 0.2s linear;
-}
-
-.dropdown .links a{
+.nav-links {
     display: flex;
-    color: white;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #555;
     text-decoration: none;
-    padding: 15px 0;
-    justify-content: center;
-    align-items: center;
-    transition: 0.2s linear;
+    font-size: 14px;
 }
 
-.dropdown .links a:hover{
-    background-color: rgb(211,3,3);
+.nav-links a:hover {
+    color: #111;
 }
+hero {
+    min-height: 80vh;
 
-section{
-    width: 100%;
-    height: 90vh;
-}
+    max-width: 1100px;
+    margin: auto;
 
-.main-container{
-    width: 100%;
-    height: 100%;
+    padding: 150px 8% 100px;
+
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.main-container .content{
-    color: white;
-    width: 40%;
-    min-height: 100px;
-}
-
-.content h1{
-    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
-}
-
-.content h1 span{
-    font-weight: 700;
-    text-shadow: 0 0 10px rgb(211,3,3);
-    color: rgb(211,3,3);
-}
-
-.content .typewriter{
-    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
-    font-weight: 700;
-}
-
-.typewriter span{
-    color: rgb(211,3,3);
-    text-shadow:  0 0 10px rgb(211,3,3);
-}
-
-.content p{
-    font-size: clamp(0,4rem, 0.2rem + 9vw, 1rem);
-    margin : 10px 0;
-}
-
-.social-links i{
-    display: inline-flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    background-color: transparent;
-    border: 0.2rem solid rgb(211,3,3);
-    border-radius: 50%;
-    color: rgb(211,3,3);
-    margin: 0 15px;
-    font-size: 1.5rem;
-    transition: 0.2s linear;
 }
 
-.social-links i:hover{
-    scale: 1.3;
-    filter: drop-shadow(0 0 10px rgb(211,3,3));
-    color: black;
-    background-color: rgb(211,3,3);
+.small-text {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #777;
+    margin-bottom: 20px;
 }
 
-.content button{
-    width: 50%;
-    height: 6vh;
-    margin: 30px;
-    background-color: rgb(211,3,3);
-    color: white;
-    border: none;
-    outline: none;
-    font-size: 120%;
-    font-weight: 700;
-    border-radius: 5px;
-    transition: 0.2s linear;
+.hero h1 {
+    font-size: clamp(70px, 12vw, 150px);
+    line-height: 0.9;
+    font-weight: 500;
+    letter-spacing: -7px;
+    margin-bottom: 40px;
 }
 
-.content button:hover{
-    scale: 1.1;
-    color: rgb(211,3,3);
-    border: 2px solid rgb(211,3,3);
-    background-color: transparent;
-    font-weight: 700;
-    box-shadow: 0 0 40px 5px rgb(211,3,3);
+.intro {
+    max-width: 480px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
 }
 
-.main-container .image{
-    width: 500px;
-    height: 80vh;
-    border-radius: 100%;
-    overflow: hidden;
-    box-shadow: 0 0 50px rgb(211,3,3);
+.arrow {
+    margin-top: 50px;
+
+    width: fit-content;
+
+    text-decoration: none;
+    color: #111;
+
+    border-bottom: 1px solid #111;
+
+    padding-bottom: 6px;
+
+    font-size: 14px;
+}
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 120px 8%;
+    border-top: 1px solid #ddd;
+
+    display: grid;
+    grid-template-columns: 25% 75%;
 }
 
-.main-container .image img{
+.section-title {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.section-title span {
+    font-size: 12px;
+    color: #888;
+}
+
+.section-title h2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.section-content {
+    max-width: 600px;
+}
+
+.section-content p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.projects {
     width: 100%;
 }
 
-.main-container .image:hover{
-    animation: animate 1.5s ease-in-out infinite;
+.project {
+    text-decoration: none;
+    color: #111;
+
+    border-bottom: 1px solid #ddd;
+
+    padding: 30px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@keyframes animate {
-    0%{
-        scale: 1;
-    }
-    50%{
-        scale: 1.05;
-    }
-    100%{
-        scale: 1;
-    }
+.project:first-child {
+    padding-top: 0;
+}
+
+.project-number {
+    font-size: 11px;
+    color: #999;
+}
+
+.project h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.project p {
+    color: #777;
+    font-size: 14px;
+}
+
+.project-arrow {
+    font-size: 25px;
+
+    transition: transform 0.3s ease;
+}
+
+.project:hover .project-arrow {
+    transform: translate(5px, -5px);
 }
 
 
-@media (max-width:884px) {
-    nav .logo{
-        position: absolute;
-        top: 16px;
-        left: 15px;
-        font-size: 1.5rem;
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    border: 1px solid #ccc;
+
+    padding: 10px 18px;
+
+    font-size: 13px;
+
+    border-radius: 30px;
+}
+
+
+.contact {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 180px 8%;
+
+    text-align: center;
+
+    border-top: 1px solid #ddd;
+}
+
+.contact h2 {
+    font-size: clamp(40px, 7vw, 80px);
+    font-weight: 500;
+    letter-spacing: -3px;
+
+    margin-bottom: 35px;
+}
+
+.contact a {
+    color: #111;
+    text-decoration: none;
+
+    border-bottom: 1px solid #111;
+
+    padding-bottom: 5px;
+}
+
+footer {
+    padding: 30px 8%;
+
+    border-top: 1px solid #ddd;
+
+    display: flex;
+    justify-contentA: space-between;
+
+    font-size: 13px;
+    color: #888;
+}
+
+footer div {
+    display: flex;
+    gap: 20px;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 0 6%;
     }
 
-    .main-container{
-        display: flex;
-        flex-direction: column-reverse;
+    .nav-links {
+        gap: 15px;
     }
 
-    .nav-container .links{
-        display: none;
+    .hero {
+        padding: 120px 6% 80px;
     }
 
-    .hamburg,
-    .cancel{
+    .hero h1 {
+        letter-spacing: -4px;
+    }
+    .section {
+        padding: 80px 6%;
+
         display: block;
     }
 
-    .main-container .content{
-        width: 80%;
-    }
-    .social-links i{
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.5rem;
+    .section-title {
+        margin-bottom: 40px;
     }
 
-    .main-container .image{
-        z-index: -1;
-        width: 50%;
-        height: 60%;
-    }
-}
-
-
-@media (max-width:440px) {
-    .main-container .image{
-        width: 70%;
-        height: 60%;
+    .section-content p {
+        font-size: 20px;
     }
 
-    .main-container .content{
-        width: 80%;
+    .contact {
+        padding: 120px 6%;
     }
 
-    .main-container button{
-        margin-top: 15px;
+    footer {
+        padding: 25px 6%;
     }
 }
-
-
